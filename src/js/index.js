@@ -2,7 +2,7 @@ import refs from './elementRefs';
 import FetchImages from './fetchImages';
 import ElementControl from './elementControl';
 import createHTML from './createHTML';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -37,7 +37,7 @@ function clearGallery() {
 
 async function getImages() {
   loadMoreBtn.toggleIcon().disable();
-  loadMoreBtn.setText('Loading');
+  loadMoreBtn.setText('Loading...');
   try {
     data = await fetcher.fetch();
   } catch (error) {

@@ -10,7 +10,6 @@ class FetchImages {
   constructor() {
     this.page = 1;
   }
-
   set query(newQuery) {
     this.page = 1;
     this.#query = newQuery;
